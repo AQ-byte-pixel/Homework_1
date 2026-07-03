@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import engine, Base
-from routers import cases, warning, chat, article, admin
+from routers import cases, warning, chat, article, admin, agent
 import models
 
 # 创建数据库表
@@ -28,6 +28,7 @@ app.include_router(warning.router)
 app.include_router(chat.router)
 app.include_router(article.router)
 app.include_router(admin.router)
+app.include_router(agent.router)
 
 @app.get("/")
 def root():

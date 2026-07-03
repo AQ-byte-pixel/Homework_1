@@ -45,3 +45,14 @@ class ChatHistory(Base):
     question = Column(Text, nullable=False)
     answer = Column(Text, nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow)
+
+class AgentAnalysis(Base):
+    __tablename__ = "agent_analysis"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    content = Column(Text, nullable=False)  # 可疑信息内容
+    fraud_type = Column(String(50))  # 诈骗类型
+    risk_level = Column(String(20))  # 风险等级
+    report = Column(Text)  # 完整分析报告(JSON)
+    steps = Column(Text)  # 分析步骤(JSON)
+    created_at = Column(DateTime, default=datetime.utcnow)

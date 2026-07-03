@@ -6,6 +6,8 @@ import Cases from './pages/Cases'
 import Chat from './pages/Chat'
 import Warning from './pages/Warning'
 import Education from './pages/Education'
+import Platform from './pages/Platform'
+import Agent from './pages/Agent'
 import Admin from './pages/Admin'
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/chat" element={<Chat />} />
         <Route path="/warning" element={<Warning />} />
         <Route path="/education" element={<Education />} />
+        <Route path="/platform" element={<Platform />} />
+        <Route path="/agent" element={<Agent />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
     </AppLayout>

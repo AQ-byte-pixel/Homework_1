@@ -7,7 +7,9 @@ import {
   AlertOutlined, 
   BookOutlined, 
   SettingOutlined,
-  SafetyOutlined
+  SafetyOutlined,
+  LinkOutlined,
+  ThunderboltOutlined
 } from '@ant-design/icons';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -44,9 +46,19 @@ const AppLayout = ({ children }) => {
       label: '风险预警',
     },
     {
+      key: '/agent',
+      icon: <ThunderboltOutlined />,
+      label: '智能体分析',
+    },
+    {
       key: '/education',
       icon: <BookOutlined />,
       label: '科普中心',
+    },
+    {
+      key: '/platform',
+      icon: <LinkOutlined />,
+      label: '联动平台',
     },
     {
       key: '/admin',

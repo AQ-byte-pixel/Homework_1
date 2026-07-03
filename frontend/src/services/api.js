@@ -46,4 +46,11 @@ export const adminApi = {
   getArticles: (params = {}) => api.get('/api/admin/articles', { params }),
 };
 
+// 智能体分析
+export const agentApi = {
+  analyze: (content) => api.post('/api/agent/analyze', { content }, { timeout: 120000 }),
+  getHistory: (params = {}) => api.get('/api/agent/history', { params }),
+  getReport: (id) => api.get(`/api/agent/report/${id}`),
+};
+
 export default api;
